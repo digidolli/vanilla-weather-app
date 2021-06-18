@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Vanilla Weather App</title>
 </head>
 <body>
@@ -20,8 +21,8 @@
                 </form>
             <div class="currentForecast row">
                 <div class="cityHeading">
-                    <h1 class="place">
-                        London, UK
+                    <h1 class="place" id="place">
+                        
                     </h1>
                     <h1 class="day">
                         Friday, 15:00
@@ -33,8 +34,8 @@
                 </div>
                 <div class="col-6 secondCol">
                 <ul>
-                    <li class="currentTemp">
-                            17°
+                    <li class="currentTemp" id="temp">
+                        <li>
                             <span class="celc units">
                                 C
                             </span>
@@ -42,18 +43,14 @@
                             <span class="faren units">
                                 F
                             </span>
+                            </li>
                     </li>
                 </ul>
                 </div>
-                <h1 class="weatherDetails">Cloudy</h1>
+                <h1 class="weatherDetails" id="weatherDetails"></h1>
                 <p>
-                    <br>
-                    <strong>Humidity</strong> 
-                    67% 
-                    <strong>Wind</strong> 
-                    5mph 
-                    <strong>Rain:</strong>
-                    10%
+                    <strong>Humidity: <span id="humidity"></strong></span><strong>%</strong>
+                    <strong>| Wind:<span id="wind"></span> Km/H</strong>
                 </p>
             </div>
         </div>
