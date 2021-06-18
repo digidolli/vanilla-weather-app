@@ -3,7 +3,7 @@ form {
   border: solid #ffc8dd 1px;
   border-radius: 30px;
   font-weight: 700;
-  padding: 15px 9px;
+  padding: 15px 0;
 }
 input {
   background-color: #ffc8dd;
