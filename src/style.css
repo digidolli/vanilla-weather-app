@@ -54,7 +54,7 @@ img {
 .currentForecast {
   border: solid #ffc8dd 1px;
   border-radius: 30px;
-  margin: 20px auto;
+  margin: 20px auto 0;
   padding: 20px;
 }
 .firstCol {
@@ -102,4 +102,11 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: #b591ca solid 0.1px;
+}
+.units {
+  text-decoration: none;
+  color: aliceblue;
+}
+.units:hover {
+  color: #b591ca;
 }

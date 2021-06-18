@@ -20,6 +20,9 @@ function displayTemp(response){
     let day = document.querySelector("#day")
     let weatherIcon = document.querySelector("#icon");
     let iconId = response.data.weather[0].icon;
+
+    celsiusTemperature = Math.round(response.data.main.temp);
+
     celcTemp =  Math.round(celcTemp);
     displayTemp.innerHTML = `${celcTemp}°`;
     cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
@@ -42,8 +45,29 @@ function handleSubmit (event) {
     search(cityInput.value);
     
 }
+ function displayFaren(event){
+     event.preventDefault();
+     let farenValue = Math.round(( celsiusTemperature * 9) / 5 + 32);
+     let displayTemp = document.querySelector("#temp");
+     displayTemp.innerHTML =`${farenValue}°`;
+ }
 
+ function displayCelsius(event){
+    event.preventDefault();
+    celsius.classList.remove("active");
+    let displayTemp = document.querySelector("#temp");
+    displayTemp.innerHTML = `${celsiusTemperature}°`;
+ }
 
+ celsiusTemperature = null;
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", handleSubmit);
+
+let farenheit = document.querySelector("#faren");
+farenheit.addEventListener ("click", displayFaren);
+
+let celsius = document.querySelector("#celc");
+celsius.addEventListener ("click", displayCelsius)
+
+search("New York");
