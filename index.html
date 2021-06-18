@@ -15,24 +15,23 @@
         <div class="weather-app">
                   <form id="search-bar" >
                     <input  type="text" name="City Search" placeholder="Please enter a city..."  autocomplete="off" id="city-search">
-                    <br>
                         <input type="submit" value="🔎" id="search-city-button">
                         <input type="submit" value="📍" id="current-location-button">
                 </form>
             <div class="currentForecast row">
+                <div class="cityHeading">
+                    <h1 class="place">
+                        London, UK
+                    </h1>
+                    <h1 class="day">
+                        Friday, 15:00
+                        </h1>
+                </div>
                 <div class="col-6 firstCol">
-                <h1 class="place">
-                    London, UK
-                </h1>
-                <h1 class="day">
-                    Friday 
-                </h1>
-                <h1 class="time">
-                    15:00
-                </h1>
+                    
+                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy" class="icon-cloudy">
                 </div>
                 <div class="col-6 secondCol">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy" class="icon-cloudy">
                 <ul>
                     <li class="currentTemp">
                             17°
@@ -44,20 +43,18 @@
                                 F
                             </span>
                     </li>
-                    <li class="weatherDescription">
-                        Cloudy
-                    </li>
-                    <li class="weatherDetails">
-                        Humidity: 67%
-                    </li>
-                    <li class="weatherDetails">
-                        Wind: 12 mph
-                    </li>
-                    <li class="weatherDetails">
-                        Rain: 10%
-                    </li>
                 </ul>
                 </div>
+                <h1 class="weatherDetails">Cloudy</h1>
+                <p>
+                    <br>
+                    <strong>Humidity</strong> 
+                    67% 
+                    <strong>Wind</strong> 
+                    5mph 
+                    <strong>Rain:</strong>
+                    10%
+                </p>
             </div>
         </div>
     </div>       
