@@ -37,7 +37,7 @@ img {
   position: relative;
   left: 25px;
   bottom: 20px;
-  width: 100px;
+  width: 110px;
 }
 .weather-app {
   max-width: 400px;
@@ -61,9 +61,9 @@ img {
   padding-top: 10px;
 }
 .secondCol {
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 0px;
-  padding-right: 40px;
+  padding-right: 50px;
 }
 .place {
   font-weight: 700;
