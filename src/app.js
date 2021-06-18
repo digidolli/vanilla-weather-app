@@ -10,6 +10,36 @@ function formatDate(timestamp){
     return `${day}, ${hours}:${minutes}`
 }
 
+function dispalyUpcomingForecast() {
+    let forecastElement = document.querySelector("#upcomingForecast");
+    
+    let forecastHTML = ``;
+    let day = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+    day.forEach (function(days){
+        forecastHTML =
+            forecastHTML +
+            `
+            <div class="col-2  individualDay">
+                <div class="upcomingDay ">
+                    ${days}
+                </div>
+                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloud" class="upcomingIcon">
+                <div class="upcomingTemp">
+                    <span class="highTemp">
+                        18°
+                    </span>
+                    <span class="lowTemp">
+                        12°
+                    </span>
+                </div>
+            </div>
+        `;
+    });
+    
+    forecastHTML = forecastHTML + ``;
+    forecastElement.innerHTML = forecastHTML;
+};
+
 function displayTemp(response){
     let celcTemp = response.data.main.temp;
     let displayTemp = document.querySelector("#temp");
@@ -69,3 +99,4 @@ let celsius = document.querySelector("#celc");
 celsius.addEventListener ("click", displayCelsius)
 
 search("New York");
+dispalyUpcomingForecast();

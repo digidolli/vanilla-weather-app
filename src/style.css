@@ -35,7 +35,7 @@ p {
 }
 #icon {
   position: relative;
-  left: 25px;
+  left: 35px;
   bottom: 20px;
   width: 110px;
 }
@@ -60,7 +60,7 @@ footer {
   border: solid #ffc8dd 1px;
   border-radius: 30px;
   margin: 20px auto 0;
-  padding: 20px;
+  padding: 10px;
 }
 .firstCol {
   padding-top: 10px;
@@ -68,7 +68,7 @@ footer {
 .secondCol {
   padding-top: 10px;
   padding-left: 0px;
-  padding-right: 50px;
+  padding-right: 65px;
 }
 .place {
   font-weight: 700;
@@ -99,21 +99,22 @@ footer {
   text-transform: capitalize;
 }
 .upcomingForecast {
-  padding: 10px;
+  padding: ;
   text-align: center;
-  border: solid #ffc8dd 1px;
+
   border-radius: 30px;
   margin: 20px 3px 0;
+  padding: 10px;
 }
 .individualDay {
-  border: solid #ffc8dd 1px;
-  border-radius: 20px;
-  margin: 2px;
+  border: solid #ffc8dd 0.5px;
+  border-radius: 10px;
+  margin: 4px;
   padding: 0;
   font-weight: 700;
 }
 .upcomingIcon {
-  width: 20px;
+  width: 28px;
 }
 .highTemp {
   font-size: 13px;
