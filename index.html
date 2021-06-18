@@ -15,36 +15,46 @@
         <div class="weather-app">
                   <form id="search-bar" >
                     <input  type="text" name="City Search" placeholder="Please enter a city..."  autocomplete="off" id="city-search">
+                    <br>
                         <input type="submit" value="🔎" id="search-city-button">
                         <input type="submit" value="📍" id="current-location-button">
                 </form>
             <div class="currentForecast row">
-                <div class="col-6 timeAndDate">
-                <h1>
+                <div class="col-6 firstCol">
+                <h1 class="place">
                     London, UK
-                    <br>
-                    <span>
-                        Friday 15:00
-                    </span>
                 </h1>
+                <h1 class="day">
+                    Friday 
+                </h1>
+                <h1 class="time">
+                    15:00
+                </h1>
+                </div>
+                <div class="col-6 secondCol">
+                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy" class="icon-cloudy">
                 <ul>
-                    <li>
+                    <li class="currentTemp">
+                            17°
+                            <span class="celc units">
+                                C
+                            </span>
+                            <span class="units">|</span>
+                            <span class="faren units">
+                                F
+                            </span>
+                    </li>
+                    <li class="weatherDescription">
                         Cloudy
                     </li>
-                </ul>
-                </div>
-                <div class="col-6">
-                <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy" class="icon-cloudy">
-                <h2>17°C | F</h2>
-                <ul>
-                    <li>
-                      Precipation: 6%
-                    </li>
-                    <li>
+                    <li class="weatherDetails">
                         Humidity: 67%
                     </li>
-                    <li>
+                    <li class="weatherDetails">
                         Wind: 12 mph
+                    </li>
+                    <li class="weatherDetails">
+                        Rain: 10%
                     </li>
                 </ul>
                 </div>
