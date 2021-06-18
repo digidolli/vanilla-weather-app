@@ -1,6 +1,3 @@
-let searchedCity = "lisbon";
-let apiKey = "6b1dbcd0aa844738a2df75082ac70380";
-let searchedCityUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchedCity}&appid=${apiKey}&units=metric`;
 
 function formatDate(timestamp){
     let date = new Date (timestamp);
@@ -33,6 +30,20 @@ function displayTemp(response){
     weatherIcon.setAttribute ("src", `http://openweathermap.org/img/wn/${iconId}@2x.png`);
     weatherIcon.setAttribute("alt", response.data.weather[0].description);
 };
-axios.get(searchedCityUrl).then(displayTemp);
+function search(city){
+    let apiKey = "6b1dbcd0aa844738a2df75082ac70380";
+    let searchedCityUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(searchedCityUrl).then(displayTemp);
+}
+
+function handleSubmit (event) {
+    event.preventDefault();
+    let cityInput = document.querySelector("#city-search");
+    search(cityInput.value);
+    
+}
 
 
+
+let form = document.querySelector("#search-bar");
+form.addEventListener("submit", handleSubmit);
