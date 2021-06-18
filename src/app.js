@@ -14,7 +14,6 @@ function formatDate(timestamp){
 }
 
 function displayTemp(response){
-    console.log(response);
     let celcTemp = response.data.main.temp;
     let displayTemp = document.querySelector("#temp");
     let cityName = document.querySelector("#place");
