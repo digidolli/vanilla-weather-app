@@ -33,16 +33,21 @@ p {
   text-align: center;
   font-size: 13px;
 }
-img {
+#icon {
   position: relative;
   left: 25px;
   bottom: 20px;
   width: 110px;
 }
+footer {
+  font-size: 10px;
+  text-align: center;
+  color: white;
+}
 .weather-app {
   max-width: 400px;
   display: block;
-  margin: 50px auto;
+  margin: 50px auto 10px;
   border: double #ffc8dd;
   border-radius: 50px;
   border-width: 10px;
@@ -92,6 +97,31 @@ img {
   font-weight: 600;
   margin: 0;
   text-transform: capitalize;
+}
+.upcomingForecast {
+  padding: 10px;
+  text-align: center;
+  border: solid #ffc8dd 1px;
+  border-radius: 30px;
+  margin: 20px 3px 0;
+}
+.individualDay {
+  border: solid #ffc8dd 1px;
+  border-radius: 20px;
+  margin: 2px;
+  padding: 0;
+  font-weight: 700;
+}
+.upcomingIcon {
+  width: 20px;
+}
+.highTemp {
+  font-size: 13px;
+  font-weight: 700;
+}
+.lowTemp {
+  font-size: 13px;
+  font-weight: 500;
 }
 ::placeholder {
   color: #b591ca;

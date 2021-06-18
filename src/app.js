@@ -20,9 +20,7 @@ function displayTemp(response){
     let day = document.querySelector("#day")
     let weatherIcon = document.querySelector("#icon");
     let iconId = response.data.weather[0].icon;
-
     celsiusTemperature = Math.round(response.data.main.temp);
-
     celcTemp =  Math.round(celcTemp);
     displayTemp.innerHTML = `${celcTemp}°`;
     cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
