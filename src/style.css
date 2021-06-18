@@ -1,6 +1,61 @@
-.icon-cloudy {
-  max-width: 100px;
+form {
+  text-align: center;
+  border: solid #ffc8dd 1px;
+  border-radius: 30px;
+  font-weight: 700;
+  padding: 20px;
+}
+input {
+  background-color: #ffc8dd;
+  color: #b591ca;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+h1 {
+  font-weight: 800;
 }
 h2 {
   display: inline;
+  font-weight: 800;
+}
+body {
+  background-color: #b591ca;
+}
+.icon-cloudy {
+  max-width: 100px;
+}
+.weather-app {
+  max-width: 600px;
+  display: block;
+  margin: 50px auto;
+  border: double #ffc8dd;
+  border-radius: 50px;
+  border-width: 10px;
+  padding: 40px;
+  background-color: #ffafcc;
+  color: #b591ca;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+}
+.currentForecast {
+  border: solid #ffc8dd 1px;
+  border-radius: 30px;
+  margin: 20px auto;
+  padding: 20px;
+}
+::placeholder {
+  color: #b591ca;
+}
+#search-city-button {
+  margin-left: 5px;
+}
+#current-location-button {
+  margin-left: 5px;
+}
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: #b591ca solid 0.1px;
 }
