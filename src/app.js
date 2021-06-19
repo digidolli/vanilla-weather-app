@@ -12,13 +12,12 @@ function formatDate(timestamp){
 function formatUpcomingDays (timestamp){
     let date = new Date(timestamp * 1000);
     let day = date.getDay();
-    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    let days = [ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat","Sun",]
     return days[day];
 }
 
 function displayUpcomingForecast(response){
     let forecast = response.data.daily;
-    console.log(forecast)
     let forecastElement = document.querySelector("#upcomingForecast");
     
     let forecastHTML = ``;
@@ -64,7 +63,7 @@ function displayTemp(response){
     let iconId = response.data.weather[0].icon;
     celsiusTemperature = Math.round(response.data.main.temp);
     celcTemp =  Math.round(celcTemp);
-    displayTemp.innerHTML = `${celcTemp}°`;
+    displayTemp.innerHTML = `${celcTemp}°C`;
     cityName.innerHTML = `${response.data.name}, ${response.data.sys.country}`;
     weatherDescription.innerHTML = response.data.weather[0].description;
     humidityLevel.innerHTML = response.data.main.humidity;
@@ -88,29 +87,11 @@ function handleSubmit (event) {
     search(cityInput.value);
     
 }
- function displayFaren(event){
-     event.preventDefault();
-     let farenValue = Math.round(( celsiusTemperature * 9) / 5 + 32);
-     let displayTemp = document.querySelector("#temp");
-     displayTemp.innerHTML =`${farenValue}°`;
- }
 
- function displayCelsius(event){
-    event.preventDefault();
-    celsius.classList.remove("active");
-    let displayTemp = document.querySelector("#temp");
-    displayTemp.innerHTML = `${celsiusTemperature}°`;
- }
 
- celsiusTemperature = null;
+celsiusTemperature = null;
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", handleSubmit);
-
-let farenheit = document.querySelector("#faren");
-farenheit.addEventListener ("click", displayFaren);
-
-let celsius = document.querySelector("#celc");
-celsius.addEventListener ("click", displayCelsius)
 
 search("New York");
