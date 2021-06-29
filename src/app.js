@@ -94,4 +94,4 @@ celsiusTemperature = null;
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", handleSubmit);
 
-search("New York");
+search("London");
